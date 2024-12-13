@@ -8,7 +8,7 @@ class Coffe(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('main.ui', self)
-        self.con = sqlite3.connect('coffe.sql')
+        self.con = sqlite3.connect('coffee.sql')
         self.cur = self.con.cursor()
         self.cur.execute('''SELECT * FROM Coffee''')
         res = self.cur.fetchall()
